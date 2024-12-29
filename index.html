@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" href="icon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="style.css">
+    <title>2024 ディジタル年賀状</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        let submitted = false;
+    </script>
+    <iframe
+        name="hidden_iframe"
+        id="hidden_iframe"
+        style="display: none"
+        onload="if(submitted){document.getElementById('replay_form').style.display = 'none';
+        document.getElementById('replay_submitted').style.display = 'flex';}"
+    ></iframe>
+    <div class="mobile-close">
+        <span class="material-symbols-outlined icon">
+            sentiment_dissatisfied
+        </span>
+        <h1><span>あぁ...</span><span>パソコンではだめです。</span></h1>
+        <p>このサイトは、スマートフォンからのみ体験できます。<br>
+        より具体的には、画面の横幅が550px以下である必要があります。</p>
+        <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://2024.jzurde.jp&size=100x100" alt="QRコード" id="qr" />
+    </div>
+    <div class="fade"></div>
+    <div class="hopup">
+        <div class="hopup_close" id="close">
+            <span class="material-symbols-outlined">
+                close
+            </span>
+        </div>
+        <div class="hopup_top">
+            <div class="sliders" id="sliders">
+                <div class="cell center" id="cell">
+                    <img src="img/22316715.png" class="dec">
+                    <p>昨年は大変お世話になりました。<br>
+                        今年もよろしくお願いします。</p>
+                </div>
+                <div class="cell">
+                    <p>とは、もちろん思っていますが、もっと伝えたいことがあります。</p>
+                    <p>それは、この部分です。</p>
+                    <img src="img/sample_highlight.png" class="shot">
+                    <p>誰にも盗み見されないように、LZ78符号で符号化しておきました。<br>
+                        次のページ以降で復号方法を紹介します。</p>
+                </div>
+                <div class="cell">
+                    <h2>1.Microsoft Lenseをインストールする</h2>
+                    <p>符号語はとっても長いので、手で打ち込むと大変です。<br>「Microsoft Lense」をインストールして読み込ませます。</p>
+                    <a href="https://apps.apple.com/jp/app/microsoft-lens-pdf-scanner/id975925059?itsct=apps_box_badge&amp;itscg=30200"
+                        style="display: inline-block; overflow: hidden; border-radius: 13px;"><img
+                            src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/ja-jp?size=250x83&amp;releaseDate=1427932800"
+                            alt="Download on the App Store" style="border-radius: 13px; width: 155px;"></a>
+                    <a
+                        href='https://play.google.com/store/apps/details?id=com.microsoft.office.officelens&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img
+                            width="155px" alt='Google Play で手に入れよう'
+                            src='https://play.google.com/intl/ja/badges/static/images/badges/ja_badge_web_generic.png' /></a>
+                    <p>インストールしたら起動してください。</p>
+                    <img src="img/IMG_4624.PNG" class="shot">
+                </div>
+                <div class="cell">
+                    <h2>2.スキャンする</h2>
+                    <ol>
+                        <li>下のモードから一番左側の「処理」を選択します<br>
+                            <img src="img/IMG_4625.PNG" class="inline-shot">
+                        </li>
+                        <li>年賀状全体が映るように、撮影します<br>
+                            <img src="img/IMG_4630.PNG" class="inline-shot">
+                        </li>
+                    </ol>
+                </div>
+                <div class="cell">
+                    <h2>3.符号語を読み込む</h2>
+                    <ol>
+                        <li>読み込み枠を符号語(0と1の部分)のみを含むように調整します。<br>
+                            <img src="img/IMG_4626.PNG" class="inline-shot">
+                        </li>
+                        <li>できたら、右下の「確認」ボタンを押します。<br>
+                            <img src="img/IMG_4627.PNG" class="inline-shot">
+                        </li>
+                    </ol>
+                </div>
+                <div class="cell">
+                    <h2>4.符号語をコピーする</h2>
+                    <ol>
+                        <li>この画面が出たら、左下の「コピー」ボタンを押します。<br>
+                            <img src="img/IMG_4628.PNG" class="inline-shot">
+                        </li>
+                        <li>「テキストがコピーされました」と出たのを確認します
+                            <img src="img/IMG_4629.PNG" class="inline-shot">
+                        </li>
+                    </ol>
+                </div>
+                <div class="cell center">
+                    <img src="img/24402171.png" class="dec">
+                    <h2>準備完了です。</h2>
+                    <p class="stack">このホップアップを閉じて、「符号語」エリアに張り付けて復号してみましょう。</p>
+                </div>
+            </div>
+        </div>
+        <div class="hopup_ctr">
+            <div class="previous ctr" id="prev">前へ</div>
+            <div class="next ctr" id="next">次へ</div>
+        </div>
+    </div>
+    <div class="area">
+        <div class="top_area">
+            <div class="tab">
+                <span>2024</span>
+                <span class="material-symbols-outlined">
+                    close
+                </span>
+            </div>
+            <img src="img/asset/but.png" class="tab-ctr">
+        </div>
+        <div class="console_area" id="console_area">
+            <span>符号語:</span>
+            <textarea id="FlexTextarea" class="FlexTextarea__textarea" placeholder="符号語をここに貼り付け"></textarea>
+            <!-- <div class="FlexTextarea">
+                <div class="FlexTextarea__dummy" aria-hidden="true"></div>
+                <textarea id="FlexTextarea" class="FlexTextarea__textarea" placeholder="符号語をここに貼り付け"></textarea>
+            </div> -->
+            <button class="go" py-click="main()" id="b_go">復号する</button>            
+            <div class="result_box" id="result_box">
+                <span>復号結果:</span>
+                <div class="message" id="result_area"></div>
+                <button class="replay" id="b_replay">返信する</button>
+                <form class="replay_form c-form" id="replay_form"
+                action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSe-qsNGt_Fal5OgemRT91oBMYQA-USqHe25M3DtFKgUC-rZKg/formResponse"
+                method="POST"                
+                target="hidden_iframe"
+                onsubmit="submitted=true;">
+                    <input type="text" id="form_name" class="form_name" name="entry.1894556384">
+                    <span>返信内容:</span>
+                    <textarea name="entry.175093108" id="FlexTextarea2" class="FlexTextarea__textarea" placeholder="メッセージをここに入力"></textarea>
+                    <input type="submit" id="form_submit" class="go">
+                </form>
+            </div>
+            <div class="form_submitted" id="replay_submitted">
+                <span class="material-symbols-outlined">
+                    done
+                </span>
+                <span>送信しました</span>
+            </div>
+        </div>
+        <py-script>
+from js import document
+import math
+def main():
+    codewords = document.getElementById('FlexTextarea').value
+    codewords = codewords.replace(" ", "").replace("　", "").replace("\n", "")
+    display(Decode(codewords), target="result_area")
+            
+#符号語列を受け取り、復号結果の記号列を返す関数
+def Decode(codewords):
+    middle_codes = [] #復号する中間符号語を格納する中間符号語クラス配列を宣言し、空で初期化する
+    middle_codes = returnMiddleCode(codewords, middle_codes, 0) #returnMiddleCode関数を用いて、符号語列を中間符号語列に変換する
+    
+    symbols = MiddleDecode(middle_codes) #MiddleDecode関数を用いて、中間符号語を復号する
+    return symbols #復号結果の記号列を返す
+    
+#符号語列を受け取り、中間符号語に変換し、中間符号語クラス配列で返す関数
+def returnMiddleCode(codewords, middle_codes, i):
+    if len(codewords)>0: #受け取った符号語列の長さが0の時は、中間符号語クラス配列をそのまま返す
+        middle_index = 0 #中間符号語の第1要素を格納する変数 | 0番目の復号は第1要素は0で固定
+        k=0
+        if i!=0: 
+            k=math.ceil(math.log2(i+1)) #中間符号語の第1要素を表すビット列長を計算する
+            middle_index = int(codewords[:k],2) #中間符号語の第1要素を整数型で求める
+    
+        middle_symbol = chr(int(codewords[k:k+8], 2)) #中間符号語第2要素を、後ろに続く8桁のビット列から求める
+        middle_codes.append(MiddleCode(middle_index, middle_symbol)) #中間符号語クラス配列に、求めた中間符号語を追加する
+        i+=1
+    
+        middle_codes = returnMiddleCode(codewords[k+8:], middle_codes, i) #符号語列の内、今回使ったビット列以降のものを用いて再び中間符号語に変換する 
+    
+    return middle_codes #結果である中間符号語クラス配列を返す
+
+#中間符号語クラス配列を受け取り、復号結果の記号語列を返す関数
+def MiddleDecode(middle_codes):
+    Tree = [EdgeNode(0,"")] #根ノード(0)のみを持つ辞書木を宣言する
+    symbols = "" #復号結果の記号語列を格納する変数を宣言する
+    
+    for middle_code in middle_codes: #中間符号語1つ1つについて
+        parent_node = list(filter(lambda x:x.index==middle_code.index, Tree))[0] #Tree配列のノードエッジの内、インデックスが中間符号語の第1要素と一致するものを親ノードとする(ノードインデックスは一意であるから一致するものは必ず1つである)
+        new_symbol = parent_node.stack_symbols+middle_code.symbol #親ノードのスタックシンボルに中間符号語の第2要素を連結したものが、注目している中間符号語の復号結果である
+        
+        symbols += new_symbol #これまでの復号結果の後ろに、新たな復号結果を連結する
+        
+        new_node = EdgeNode(len(Tree), middle_code.symbol, new_symbol) #新たに辞書木に追加するノードを生成する
+        Tree.append(new_node) #新たなノードを木に追加する
+        parent_node.setNewChildren(new_node) #新たなノードを親ノードの子ノード配列に追加する
+        # symbols = MiddleDecode(middle_codes[i:], Tree, symbols, index)
+    
+    return symbols #復号結果の記号語列を返す
+
+# 中間符号語クラス
+# - 中間符号語の第1要素
+# - 中間符号語の第2要素
+# を格納する
+class MiddleCode:
+    def __init__(self, index, symbol) :
+        self.index = index
+        self.symbol = symbol
+        
+    def __repr__(self):
+        return repr((self.index, self.symbol))
+    
+# エッジノードクラス: 木のノードと、自身とその親ノードまでの辺を1セットとしたクラス
+# - ノードの節点番号(ノードインデックス)
+# - ノードとその親ノードまでをつなぐ枝のラベル
+# - ノードの子ノード集合(実装上、配列を用いた)
+# - 親要素からノードまでにたどる過程で、枝で表現される記号列(スタックシンボルと呼ぶ)
+# を格納する
+class EdgeNode:
+    def __init__(self, index, symbol, stack_symbols="") :
+        self.index = index
+        self.symbol = symbol
+        self.children = []
+        self.stack_symbols = stack_symbols
+        
+    def __repr__(self):
+        return repr((self.index, self.symbol, self.children, self.stack_symbols))
+    
+    #エッジノードオブジェクトの子ノード配列に新たなノードを追加する関数
+    def setNewChildren(self, new_child):
+        self.children.append(new_child)
+        </py-script>
+        <script>
+            let index = 0;
+            let sliders = document.getElementById('sliders');
+            let size = document.getElementById('cell').clientWidth
+            let cellCount = sliders.childElementCount;
+            let b_go = document.getElementById('b_go')
+            function goNext() {
+                if (index < cellCount - 1) {
+                    index++;
+                    sliders.style.left = '-' + size * index + 'px';
+                }
+            }
+            function goPrev() {
+                if (index > 0) {
+                    index--;
+                    sliders.style.left = '-' + size * index + 'px';
+                }
+            }
+            function closeNav() {
+                $('.hopup').fadeOut();
+                $('.fade').fadeOut();
+            }
+
+            document.getElementById('next').onclick = goNext;
+            document.getElementById('prev').onclick = goPrev;
+            document.getElementById('close').onclick = closeNav;
+
+            let textarea = document.getElementById('FlexTextarea');
+            let textarea2 = document.getElementById('FlexTextarea2');
+            //textareaのデフォルトの要素の高さを取得
+            let clientHeight = textarea.clientHeight;
+            //textareaのinputイベント
+            textarea.addEventListener('input', ()=>{
+                //textareaの要素の高さを設定（rows属性で行を指定するなら「px」ではなく「auto」で良いかも！）
+                textarea.style.height = clientHeight + 'px';
+                //textareaの入力内容の高さを取得
+                let scrollHeight = textarea.scrollHeight;
+                //textareaの高さに入力内容の高さを設定
+                textarea.style.height = scrollHeight + 'px';
+
+                b_go.style.display = "block"
+            });
+            textarea2.addEventListener('input', ()=>{
+                //textareaの要素の高さを設定（rows属性で行を指定するなら「px」ではなく「auto」で良いかも！）
+                textarea2.style.height = clientHeight + 'px';
+                //textareaの入力内容の高さを取得
+                let scrollHeight = textarea2.scrollHeight;
+                //textareaの高さに入力内容の高さを設定
+                textarea2.style.height = scrollHeight + 'px';
+
+                form_submit.style.display = "block"
+            });
+            b_go.addEventListener('click', ()=>{
+                b_go.style.display = "none";
+                document.getElementById('result_box').style.display = "block"
+            });
+            b_replay = document.getElementById('b_replay')
+            b_replay.addEventListener('click', ()=>{
+                b_replay.style.display = "none"
+                document.getElementById('replay_form').style.display = "block"
+                document.getElementById('form_name').value = getParam('name')
+            });
+
+            function getParam(name, url) {
+                if (!url) url = window.location.href;
+                name = name.replace(/[\[\]]/g, "\\$&");
+                var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                    results = regex.exec(url);
+                if (!results) return null;
+                if (!results[2]) return '';
+                return decodeURIComponent(results[2].replace(/\+/g, " "));
+            }
+
+            document.getElementById('qr').src = "https://api.qrserver.com/v1/create-qr-code/?data="+location.href+"&size=100x100"
+        </script>
+</body>
+
+</html>
